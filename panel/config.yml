@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: kontekdedektor/kontekdedektor.github.io
+  repo: kontekdedektor/ktd-cms-test.github.io
   branch: main
   auth_type: pkce
   app_id: Ov23liP0x09qZ7XWn6L0
