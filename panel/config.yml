@@ -3,7 +3,7 @@ backend:
   repo: kontekdedektor/kontekdedektor.github.io
   branch: main
   auth_type: pkce
-  app_id: Ov23lisst4nqCGfnfnp5
+  app_id: Ov23liP0x09qZ7XWn6L0
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
