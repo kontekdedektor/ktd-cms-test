@@ -1,15 +1,19 @@
 backend:
-  name: git-gateway
-  branch: main # Veya master, deponuzdaki ana dalın adını yazın
+  name: git-gateway # Netlify Identity ve Git Gateway servisini kullanacağımızı belirtir
+  branch: main # veya master, projenizin ana branch'i hangisiyse onu yazın
 
-media_folder: "images"
-public_folder: "/images"
+# Yüklenen resimlerin nereye kaydedileceğini ve sitede nasıl görüneceğini belirtir
+media_folder: "static/images/uploads" # Yüklenen resimler bu klasöre gider
+public_folder: "/images/uploads" # Sitenizdeki resimlerin yolu bu şekilde olur
 
 collections:
-  - name: "posts"
-    label: "Gönderiler"
-    folder: "_posts"
-    create: true
-    fields:
+  # Bu bölüm "Ürünler" sayfasını yönetmek için
+  - name: "urunler" # CMS içinde kullanılacak kimlik (sadece harf ve rakam)
+    label: "Ürünler" # Admin panelinde görünecek etiket
+    folder: "_data/urunler" # Yönetilecek içeriklerin (markdown dosyaları) saklanacağı klasör
+    create: true # Yeni ürün eklemeye izin ver
+    slug: "{{slug}}" # Dosya adını başlığa göre otomatik oluşturur
+    fields: # Her bir ürün için hangi alanların olacağı
       - {label: "Başlık", name: "title", widget: "string"}
-      - {label: "İçerik", name: "body", widget: "markdown"}
+      - {label: "Açıklama", name: "description", widget: "markdown"}
+      - {label: "Öne Çıkan Resim", name: "thumbnail", widget: "image"}
