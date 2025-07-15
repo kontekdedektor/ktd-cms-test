@@ -1,27 +1,15 @@
 backend:
-  name: git-gateway # Netlify ile kolayca giriş yapmanızı sağlar
-  branch: main     # GitHub'daki ana dosya dalınızın adı. Genellikle 'main' veya 'master' olur.
+  name: git-gateway
+  branch: main # Veya master, deponuzdaki ana dalın adını yazın
 
-# Sitenize yükleyeceğiniz görsellerin nereye kaydedileceğini belirtiyoruz
-media_folder: "images" # Sitenizin ana klasöründeki "images" klasörüne yüklensin
-public_folder: "/images" # Yüklendikten sonra bu yoldan erişilsin
+media_folder: "images"
+public_folder: "/images"
 
-# Burası sitenizde ne tür içerikleri yöneteceğinizi belirlediğimiz yer.
-# Şimdilik sadece ürünlerinizi yönetmek için bir örnek verelim.
 collections:
-  - name: "products" # İç kodda kullanacağımız isim
-    label: "Ürünler" # Yönetim panelinde görünen başlık
-    folder: "_data/products" # Ürün bilgilerinizi saklayacağımız yeni bir klasör (burayı siz oluşturacaksınız)
-    create: true # Yeni ürün eklemeye izin ver
-    slug: "{{slug}}" # Ürün dosya adları otomatik olarak ürün adına göre oluşturulacak
-    extension: "json" # Ürün bilgileri JSON formatında kaydedilecek
-    format: "json"
-    fields: # Bir ürünün hangi bilgilere sahip olacağını tanımlıyoruz
-      - {label: "Ürün Adı", name: "title", widget: "string", required: true}
-      - {label: "Kısa Açıklama (Türkçe)", name: "description_tr", widget: "text", required: true}
-      - {label: "Kısa Açıklama (İngilizce)", name: "description_en", widget: "text", required: true}
-      - {label: "Ürün Görseli", name: "image", widget: "image", required: true, media_folder: "/images/products", public_folder: "/images/products"}
-      - {label: "Fiyat", name: "price", widget: "string", required: true, hint: "Örn: ₺7,999"}
-      - {label: "Ana Özellikler (Türkçe)", name: "features_tr", widget: "list", field: {label: "Özellik", name: "feature", widget: "string"}}
-      - {label: "Ana Özellikler (İngilizce)", name: "features_en", widget: "list", field: {label: "Feature", name: "feature", widget: "string"}}
-      # Daha fazla ürün bilgisi eklemek isterseniz buraya ek alanlar tanımlayabilirsiniz.
+  - name: "posts"
+    label: "Gönderiler"
+    folder: "_posts"
+    create: true
+    fields:
+      - {label: "Başlık", name: "title", widget: "string"}
+      - {label: "İçerik", name: "body", widget: "markdown"}
