@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+<meta name="robots" content="index, follow">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="favicon.png">
 
-     
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontek Dedektör</title>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-     
-     
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
 <!-- =================================================
      SEO & Sosyal Medya Meta Etiketleri
      ================================================= -->
+
 <title>KTD | Yüksek Hassasiyetli Gradiyometre ve Yeraltı Görüntüleme Cihazları</title>
 <meta name="description" content="KTD, Konya'da yeraltı algılama ve görüntüleme için yüksek hassasiyetli gradiyometreler tasarlar ve üretir. Arkeoloji, definecilik ve jeoloji için en ileri teknolojiyi keşfedin.">
 <meta name="keywords" content="gradiyometre, yeraltı görüntüleme, metal dedektörü, define avcılığı, arkeoloji, KTD, Konya teknoloji dedektör, akıllı alan analizi">
@@ -37,6 +37,7 @@
 <!-- =================================================
      Yapısal Veri (Schema.org)
      ================================================= -->
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -481,6 +482,7 @@
 <body class="min-h-screen">
 
 <!-- Navbar -->
+
 <header class="fixed w-full z-50 transition-all duration-300">
   <nav class="bg-opacity-20 bg-black backdrop-blur-md py-4 px-6 md:px-12">
     <div class="container mx-auto flex justify-between items-center">
@@ -502,7 +504,9 @@
           <span class="text-gray-500">|</span>
           <a href="#" class="text-gray-400 hover:text-primary transition-all language-selector" data-lang="en" style="font-weight: bold;">EN</a>
         </div>
+
         <!-- Mobil Menü Butonu Erişilebilirlik - DÜZENLENDİ -->
+
         <button aria-label="Menüyü Aç" class="md:hidden text-white focus:outline-none w-10 h-10 flex items-center justify-center">
           <i class="ri-menu-line ri-2x"></i>
         </button>
@@ -535,6 +539,7 @@
 </div>
 
 <!-- Hero Section -->
+
 <section id="home" class="hero-section min-h-screen flex items-center">
   <div class="container mx-auto px-6 md:px-12 py-24">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -556,23 +561,49 @@
         </div>
       </div>
       
-      <!-- Video Bölümü - DÜZENLENDİ -->
+      <!-- Video Section -->
+       
       <div class="video-container relative w-full">
         <div class="aspect-w-16 aspect-h-9">
-          <!-- UYARI: "VIDEO_ID_BURAYA" kısmını kendi YouTube video ID'nizle değiştirin (örneğin:dQw4w9WgXcQ) -->
-          <iframe 
-            class="w-full h-full absolute top-0 left-0" 
-            src="https://www.youtube.com/embed/vowupdQfLi0?autoplay=1&mute=1&modestbranding=1&rel=0&controls=0&showinfo=0&iv_load_policy=3&loop=1&playlist=vowupdQfLi0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-            title="KTD Tanıtım Videosu" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
+          <iframe class="w-full h-full absolute top-0 left-0" src="https://www.youtube.com/embed/vowupdQfLi0?autoplay=1&mute=1&modestbranding=1&rel=0&controls=0&showinfo=0&iv_load_policy=3&loop=1&playlist=vowupdQfLi0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  @media (max-width: 767px) {
+    .hero-section {
+      padding-top: 100px;
+    }
+    
+    .video-container {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+</style>
 
 <!-- Features Section -->
 <section id="about" class="py-20 bg-[#0A0F2D]">
@@ -1277,7 +1308,7 @@
             </div>
             <div>
               <h4 class="text-lg font-bold mb-1" data-tr="E-posta" data-en="Email">E-posta</h4>
-              <p class="text-gray-400">info@ktd.com.tr</p>
+              <p class="text-gray-400">info@kontekdedektor.com</p>
             </div>
           </div>
         </div>
@@ -1498,7 +1529,7 @@
           </li>
           <li class="flex items-center">
             <i class="ri-mail-line text-primary mr-3"></i>
-            <span class="text-gray-400">info@ktd.com.tr</span>
+            <span class="text-gray-400">info@kontekdedektor.com</span>
           </li>
           <li class="flex items-center">
             <i class="ri-time-line text-primary mr-3"></i>
