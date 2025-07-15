@@ -1,19 +1,26 @@
-backend:
-  name: git-gateway # Netlify Identity ve Git Gateway servisini kullanacağımızı belirtir
-  branch: main # veya master, projenizin ana branch'i hangisiyse onu yazın
+# /admin/config.yml - YENİ VE BASİT HALİ
 
-# Yüklenen resimlerin nereye kaydedileceğini ve sitede nasıl görüneceğini belirtir
-media_folder: "static/images/uploads" # Yüklenen resimler bu klasöre gider
-public_folder: "/images/uploads" # Sitenizdeki resimlerin yolu bu şekilde olur
+backend:
+  name: git-gateway
+  branch: main # veya projenizin ana branch'i ne ise o
+
+# Yüklenen resimler için ayarlar (bunlar aynı kalıyor)
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  # Bu bölüm "Ürünler" sayfasını yönetmek için
-  - name: "urunler" # CMS içinde kullanılacak kimlik (sadece harf ve rakam)
+  # "Ürünler" için yeni yapılandırma
+  - name: "urunler_sayfasi" # Koleksiyonun kimliği
     label: "Ürünler" # Admin panelinde görünecek etiket
-    folder: "_data/urunler" # Yönetilecek içeriklerin (markdown dosyaları) saklanacağı klasör
-    create: true # Yeni ürün eklemeye izin ver
-    slug: "{{slug}}" # Dosya adını başlığa göre otomatik oluşturur
-    fields: # Her bir ürün için hangi alanların olacağı
-      - {label: "Başlık", name: "title", widget: "string"}
-      - {label: "Açıklama", name: "description", widget: "markdown"}
-      - {label: "Öne Çıkan Resim", name: "thumbnail", widget: "image"}
+    files: # "folder" yerine "files" kullanıyoruz
+      - name: "urunler" # Bu ayar grubunun kimliği
+        label: "Tüm Ürünler" # Panelde görünecek başlık
+        file: "_data/urunler.json" # TÜM ürünlerin kaydedileceği TEK dosya
+        fields:
+          - name: "urun_listesi" # Alanın kimliği
+            label: "Ürün Listesi" # Panelde görünecek etiket
+            widget: "list" # Bu bir liste olacak
+            fields: # Listenin içindeki her bir ürünün alanları
+              - {label: "Başlık", name: "title", widget: "string"}
+              - {label: "Açıklama", name: "description", widget: "markdown"}
+              - {label: "Resim", name: "thumbnail", widget: "image"}
